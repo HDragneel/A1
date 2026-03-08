@@ -14,31 +14,11 @@ height:100vh;
 margin:0;
 flex-direction:column;
 font-family:Arial;
-}
-
-#imagenRandom{
-max-width:70%;
-max-height:70vh;
-animation: aparecer 0.5s ease;
-}
-
-@keyframes aparecer{
-from{
-opacity:0;
-transform:scale(0.8);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
-
- 
-body{
 background:linear-gradient(135deg,#1e3c72,#2a5298);
 color:white;
 }
-  
-  button{
+
+button{
 font-size:50px;
 padding:25px 60px;
 background-color:#26CFFF;
@@ -53,29 +33,35 @@ button:hover{
 background-color:#cc0000;
 transform:scale(1.1);
 }
-  
+
 #imagenRandom{
 max-width:70%;
 max-height:70vh;
 height:auto;
+display:none;
+animation:aparecer 0.5s ease;
 }
-  
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:scale(0.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
 #facebook{
 position:fixed;
 right:20px;
 top:50%;
-}
-  
-button{
-font-size:40px;
-padding:20px 40px;
-cursor:pointer;
+display:none;
 }
 
-img{
-margin-top:20px;
-max-width:80%;
-display:none;
+#facebook img{
+width:80px;
 }
 
 </style>
@@ -89,13 +75,14 @@ display:none;
 <img id="imagenRandom">
 
 <a id="facebook" href="https://www.facebook.com/PaginaDe1NombreLargote" target="_blank">
-<img src="facebook.png" width="80">
+<img src="facebook.png">
 </a>
 
 <script>
 
 let boton = document.getElementById("boton");
 let imagen = document.getElementById("imagenRandom");
+let facebook = document.getElementById("facebook");
 
 boton.onclick = function(){
 
@@ -105,8 +92,10 @@ imagen.src = "imagenes/" + numeroRandom + ".jpg";
 
 imagen.style.display = "block";
 
+facebook.style.display = "block";
+
 boton.style.display = "none";
-  
+
 };
 
 </script>
@@ -114,13 +103,3 @@ boton.style.display = "none";
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
