@@ -12,6 +12,20 @@ justify-content:center;
 align-items:center;
 height:100vh;
 margin:0;
+flex-direction:column;
+font-family:Arial;
+}
+
+button{
+font-size:40px;
+padding:20px 40px;
+cursor:pointer;
+}
+
+img{
+margin-top:20px;
+max-width:80%;
+display:none;
 }
 
 </style>
@@ -20,13 +34,26 @@ margin:0;
 
 <body>
 
-<img id="imagenRandom" width="500">
+<button id="boton">Ys se unifico?</button>
+
+<img id="imagenRandom">
 
 <script>
 
+let boton = document.getElementById("boton");
+let imagen = document.getElementById("imagenRandom");
+
+boton.onclick = function(){
+
 let numeroRandom = Math.floor(Math.random() * 3) + 1;
 
-document.getElementById("imagenRandom").src = "imagenes/" + numeroRandom + ".jpg";
+imagen.src = "imagenes/" + numeroRandom + ".jpg";
+
+imagen.style.display = "block";
+
+boton.style.display = "none";
+
+};
 
 </script>
 
