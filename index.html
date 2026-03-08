@@ -15,6 +15,28 @@ margin:0;
 flex-direction:column;
 font-family:Arial;
 }
+
+#imagenRandom{
+max-width:70%;
+max-height:70vh;
+animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:scale(0.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+
+ 
+body{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+color:white;
+}
   
   button{
 font-size:50px;
@@ -92,6 +114,7 @@ boton.style.display = "none";
 </body>
 
 </html>
+
 
 
 
