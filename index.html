@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Imagen Random</title>
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<img id="imagenRandom" width="500">
+
+<script>
+
+let numeroRandom = Math.floor(Math.random() * 3) + 1;
+
+document.getElementById("imagenRandom").src = "imagenes/" + numeroRandom + ".jpg";
+
+</script>
+
+</body>
+
+</html>
